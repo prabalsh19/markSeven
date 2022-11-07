@@ -8,6 +8,9 @@ function translate (){
 .then(response=>response.json())
 
 .then(data=>{output.innerHTML = data.contents.translated; console.log(data.contents.translated);})
-
+.catch((err)=>{
+    console.log(err);
+    alert("Something went wrong. Please try again later!")
+})
 
 }
